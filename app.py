@@ -1,6 +1,15 @@
 import streamlit as st
 import os
 import re
+import zipfile 
+
+for archivo in os.listdir("."):
+    if archivo.endswith(".zip"):
+        nombre_carpeta = archivo.replace(".zip", "")
+        if not os.path.exists(nombre_carpeta):
+            with zipfile.ZipFile(archivo, 'r') as zip_ref:
+                zip_ref.extractall(".")
+
 from langchain_community.document_loaders import PyPDFLoader
 from text_cleaner import clean_parliamentary_text
 from document_extractor import extract_pnl_by_id, extract_amendment_by_number, extract_full_pdl, extract_speech
