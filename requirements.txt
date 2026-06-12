@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-openai
+langchain-chroma
+langchain-community
+pypdf
+plotly
+fpdf2
+python-dotenv
