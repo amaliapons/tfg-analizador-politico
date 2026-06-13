@@ -7,3 +7,4 @@ pypdf
 plotly
 fpdf2
 python-dotenv
+protobuf==3.20.3
